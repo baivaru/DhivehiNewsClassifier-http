@@ -1,14 +1,13 @@
 $(document).ready(function() {
     $('#generate-button').click(function(e){
         e.preventDefault();
-        var news = $("#news").val();
+        var raw_news = $("#news").val();
 
         $('#results').html("");
 
-        axios.get(`/api/classify/${news}`).then(function (response) {
-            var raw = response.data.category;
-
-            $('#results').append(`${raw}`);
+        axios.post(`/api/classify/`, {news : raw_news}).then(function (response) {
+            var result = response.data.category;
+            $('#results').append(`${result}`);
         });
     });
 })

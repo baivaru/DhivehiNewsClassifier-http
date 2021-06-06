@@ -27,9 +27,10 @@ async def index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 
-@app.get("/api/classify/{news}")
-async def multi_word(request: Request, news: str):
-    category = classifier.predict(news)
+@app.post("/api/classify/")
+async def multi_word(request: Request):
+    data = await request.json()
+    category = classifier.predict(data['news'])
     return {
         "category": category
     }
