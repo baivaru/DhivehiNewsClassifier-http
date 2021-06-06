@@ -154,3 +154,8 @@ body {
 .text-label {
   font-size: 1.2em;
 }
+
+.note {
+  font-size: 1.2em;
+  color: grey;
+}
