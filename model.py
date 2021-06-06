@@ -30,7 +30,7 @@ class DhivehiNewsClassifier:
         return text
 
     def predict(self, text):
-        categories = ["ސިޔާސީ", "ވިޔަފާރި", "ކުޅިވަރު", "ދުނިޔޭގެ ޙަބަރު", "ރިޕޯޓް"]
+        categories = ["ސިޔާސީ", "ވިޔަފާރި", "ކުޅިވަރު", "ދުނިޔޭގެ ޚަބަރު", "ރިޕޯޓް"]
         cleaned_text = self.cleaner(text)
         encoded_text = self.tokenizer.texts_to_sequences([cleaned_text])
         encoded_text = sequence.pad_sequences(encoded_text, maxlen=500)
