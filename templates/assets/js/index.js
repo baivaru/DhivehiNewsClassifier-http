@@ -6,7 +6,7 @@ $(document).ready(function() {
         $('#results').html("");
 
         axios.get(`/api/classify/${news}`).then(function (response) {
-            var raw = response.data.raw;
+            var raw = response.data.category;
 
             $('#results').append(`<p>${raw}</p>`);
         });
