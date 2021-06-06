@@ -30,6 +30,4 @@ async def index(request: Request):
 @app.get("/api/classify/{news}")
 async def multi_word(request: Request, news: str):
     category = classifier.predict(news)
-    return {
-        "category": category
-    }
+    return category

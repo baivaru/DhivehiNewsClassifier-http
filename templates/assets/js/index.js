@@ -8,7 +8,7 @@ $(document).ready(function() {
         axios.get(`/api/classify/${news}`).then(function (response) {
             var raw = response.data.raw;
 
-            $('#results').append(`<p>${raw['category']}</p>`);
+            $('#results').append(`<p>${raw}</p>`);
         });
     });
 })

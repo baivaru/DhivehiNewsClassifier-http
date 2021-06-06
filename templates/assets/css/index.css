@@ -131,6 +131,7 @@ body {
 ul {
   direction: rtl;
 }
-li {
+
+form-control {
   direction: rtl;
 }
