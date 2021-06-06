@@ -1,0 +1,5 @@
+fastapi
+slowapi
+uvicorn
+jinja2
+aiofiles

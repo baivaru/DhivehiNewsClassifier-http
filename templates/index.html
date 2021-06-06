@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="dv">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Dhivehi news classifier">
+        <meta name="author" content="Baivaru">
+        <title>Dhivehi News Classifier</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.5.3/css/bootstrap.min.css" integrity="sha384-JvExCACAZcHNJEc7156QaHXTnQL3hQBixvj5RV5buE7vgnNEzzskDtx9NQ4p6BJe" crossorigin="anonymous">
+        <meta name="theme-color" content="#563d7c">
+
+        <!-- Custom styles for this template -->
+        <link href="{{ url_for('assets', path='/css/index.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/fonts.css">
+        <link rel="preload" href="assets/css/MVFaseyha.woff2" as="font" type="font/woff2" crossorigin>
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid jumbotron-main">
+            <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+            <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+            <div id="particles-js">
+                <canvas class="particles-js-canvas-el" width="1409" height="319" style="width: 100%; height: 100%;"></canvas>
+            </div>
+            <div class="container center-vertically-holder" style="margin-top:-20px;">
+                <div class="row center-vertically">
+                    <div class="col-md-12 offset-sm-0 text-center" style="margin-top:30px;margin-bottom:100px;">
+                        <h1>ދިވެހި ހަބަރު </h1>
+                        <br>
+                        <br>
+                        <hr style="border-top:1px;color:rgba(255,255,255,0.9);width:60%;margin:0px;margin-top:-50px;margin-bottom:10px;margin-left:20%;">
+                        <p></p>
+                        <p><a class="btn btn-success" role="button" href="https://github.com/ashraq1455/DhivehiNewsClassifier" target="_blank">ގިޓްހަބް</a></p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="type">ހަބަރުގެ ބައެއް ތިރީގައި ލިޔެލާ</label>
+                        <div class="form-group">
+                            <textarea class="form-control" id="news" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-success btn-block" id="generate-button">ކެޓެގަރީއަށް ލާ؟</button>
+
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h4 class="card-title">ނަތީޖާ</h4>
+                    <ul id="results">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer mt-auto py-3">
+            <div class="container text-center">
+                <span class="text-muted">ބައިވަރުގެ އުފެއްދުމެއް 2021</span> | <a
+                    href="https://github.com/ashraq1455/DhivehiNewsClassifier">ގިޓްހަބް</a> | <a href="/api">އޭޕީއަިއި</a>
+            </div>
+        </footer>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/axios.min.js"></script>
+        <script src="assets/js/index.js"></script>
+        <script src="assets/js/script.min.js"></script>
+    </body>
+</html>

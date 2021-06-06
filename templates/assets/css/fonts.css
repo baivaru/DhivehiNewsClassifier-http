@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "MV Faseyha";
+  src: url("MVFaseyha.woff2") format("woff2"),
+    url("MVFaseyha.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
